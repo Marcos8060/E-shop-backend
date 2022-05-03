@@ -8,3 +8,8 @@ from .serializer import *
 class ShopItems(generics.ListCreateAPIView):
     queryset = Item.objects.all()
     serializer_class = ItemSerializer
+
+
+class ItemDetail(generics.RetrieveAPIView):
+      queryset = Item.objects.all()
+      serializer_class = ItemSerializer

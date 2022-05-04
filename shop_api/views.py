@@ -16,5 +16,10 @@ class ItemDetail(generics.RetrieveAPIView):
 
 
 class ComingSoon(generics.ListCreateAPIView):
-    queryset = Item.objects.all()
+    queryset = Soon.objects.all()
     serializer_class = ItemSerializer
+
+
+class SoonDetail(generics.RetrieveAPIView):
+    queryset = Soon.objects.all()
+    serializer_class = SoonSerializer

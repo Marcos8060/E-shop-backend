@@ -8,6 +8,7 @@ class Item(models.Model):
     description = models.TextField()
     category = models.CharField(max_length=30)
     price = models.CharField(max_length=10)
+    amount = models.IntegerField(default=1)
 
 
     def __str__(self):

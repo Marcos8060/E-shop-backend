@@ -11,6 +11,16 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+
+cloudinary.config( 
+  cloud_name = "ochibe", 
+  api_key = "487191322497874", 
+  api_secret = "HJca6uTCKCu_0zLVx7lSsXJm1fw" 
+)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,7 +49,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'shop_api',
     'rest_framework',
-    'corsheaders'
+    'corsheaders',
+    'cloudinary_storage',
+    'cloudinary'
 ]
 
 MIDDLEWARE = [
@@ -136,3 +148,12 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
 ]
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'ochibe',
+    'API_KEY': '487191322497874',
+    'API_SECRET': 'HJca6uTCKCu_0zLVx7lSsXJm1fw',
+}
+
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

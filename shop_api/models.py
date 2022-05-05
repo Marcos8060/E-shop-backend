@@ -1,9 +1,10 @@
 from distutils.command.upload import upload
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class Item(models.Model):
-    image = models.ImageField(upload_to='media')
+    image = models.ImageField(upload_to='images') # image
     name = models.CharField(max_length=80)
     description = models.TextField()
     category = models.CharField(max_length=30)
@@ -16,7 +17,7 @@ class Item(models.Model):
 
 
 class Soon(models.Model):
-    image = models.ImageField(upload_to='media')
+    image = CloudinaryField('image')
     name = models.CharField(max_length=80)
     description = models.TextField()
     category = models.CharField(max_length=30)

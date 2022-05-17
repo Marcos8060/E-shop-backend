@@ -15,7 +15,13 @@ class ItemDetail(generics.RetrieveAPIView):
       queryset = Item.objects.all()
       serializer_class = ItemSerializer
 
-class Special(generics.ListCreateAPIView):
+
+
+class Special(generics.ListAPIView):
+    queryset = SpecialModel.objects.all()
+    serializer_class = SpecialSerializer
+
+class SpecialDetail(generics.RetrieveAPIView):
     queryset = SpecialModel.objects.all()
     serializer_class = SpecialSerializer
 

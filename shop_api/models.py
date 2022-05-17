@@ -41,3 +41,10 @@ class Special(models.Model):
     def __str__(self):
         return self.name
 
+class Random(models.Model):
+    image = models.ImageField(upload_to='images') # image
+    name = models.CharField(max_length=80)
+
+    def __str__(self):
+        return self.name
+

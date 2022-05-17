@@ -12,3 +12,8 @@ class SpecialSerializer(serializers.ModelSerializer):
     class Meta:
         model = Special
         fields = '__all__'
+
+class RandomSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Random
+        fields = '__all__'

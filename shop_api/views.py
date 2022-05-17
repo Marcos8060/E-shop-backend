@@ -19,6 +19,8 @@ class Special(generics.ListCreateAPIView):
     queryset = SpecialModel.objects.all()
     serializer_class = SpecialSerializer
 
-class SpecialDetail(generics.RetrieveAPIView):
-      queryset = SpecialModel.objects.all()
-      serializer_class = SpecialSerializer
+class RandomModel(generics.ListCreateAPIView):
+    queryset = Random.objects.all()
+    serializer_class = RandomSerializer
+
+

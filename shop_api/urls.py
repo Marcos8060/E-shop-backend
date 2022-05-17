@@ -7,4 +7,5 @@ urlpatterns = [
     path('special/',Special.as_view()),
     path('special/<int:pk>/',SpecialDetail.as_view()),
     path('random/',RandomModel.as_view()),
+    path('accessory/',AcessoryModel.as_view()),
 ]

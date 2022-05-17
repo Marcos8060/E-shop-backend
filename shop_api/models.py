@@ -41,6 +41,20 @@ class Special(models.Model):
     def __str__(self):
         return self.name
 
+
+class Accessory(models.Model):
+    image = models.ImageField(upload_to='images') # image
+    name = models.CharField(max_length=80)
+    description = models.TextField()
+    delivery = models.CharField(max_length=30,choices=DELIVERY_CHOICES,default='fastdelivery')
+    category = models.CharField(max_length=30)
+    price = models.CharField(max_length=10)
+    amount = models.IntegerField(default=1)
+    stock = models.CharField(max_length=30,choices=STOCK_CHOICES,default='instock')
+
+    def __str__(self):
+        return self.name
+
 class Random(models.Model):
     image = models.ImageField(upload_to='images') # image
     name = models.CharField(max_length=80)

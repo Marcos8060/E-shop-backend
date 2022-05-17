@@ -30,3 +30,8 @@ class RandomModel(generics.ListCreateAPIView):
     serializer_class = RandomSerializer
 
 
+class AcessoryModel(generics.ListCreateAPIView):
+    queryset = Accessory.objects.all()
+    serializer_class = AccesorySerializer
+
+

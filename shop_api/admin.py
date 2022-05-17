@@ -6,6 +6,8 @@ from .models import *
 admin.site.register(Item)
 admin.site.register(Special)
 admin.site.register(Random)
+admin.site.register(Accessory)
+
 
 
 

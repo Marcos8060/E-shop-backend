@@ -6,3 +6,9 @@ class ItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = Item
         fields = '__all__'
+
+
+class SpecialSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Special
+        fields = '__all__'

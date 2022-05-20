@@ -35,3 +35,8 @@ class AcessoryModel(generics.ListCreateAPIView):
     serializer_class = AccesorySerializer
 
 
+class AcessoryDetail(generics.RetrieveAPIView):
+    queryset = Accessory.objects.all()
+    serializer_class = AccesorySerializer
+
+
